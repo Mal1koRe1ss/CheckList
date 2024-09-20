@@ -1,0 +1,70 @@
+@import "default";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#body {
+    background-color: $bg-color;
+    box-sizing: border-box;
+    &::before, &::after {
+        box-sizing: border-box;
+      }
+} 
+
+#text1h1 {
+    color: $font-color;
+    font-family: Roboto;
+    text-shadow: 0px 0px 10px $font-glow;
+}
+
+#div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#checkbox {
+    margin: 5px;
+}
+
+.checkbox-container {
+    margin: 5px;
+    
+    input[type="checkbox"] {
+        display: none; // Varsayılan checkbox'ı gizle
+    }
+}
+
+.checkbox {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: $border-color; // Arka plan rengi
+    border-radius: 5px; // Köşeleri yuvarla
+    border: 2px solid $border-color; // Sınır rengi
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s; // Geçiş efekti
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 0.5em;
+        top: 0.2em;
+        width: 0.4em;
+        height: 0.8em;
+        border: solid white; // İşaret rengi
+        border-width: 0 0.2em 0.2em 0; // Çizgiyi sadece sağa ve aşağıya çek
+        transform: rotate(45deg);
+    }
+}
+
+input[type="checkbox"]:checked + .checkbox {
+    background-color: $border-shadow; // Seçili durumda arka plan rengi
+    border-color: $border-glow; // Seçili durumda sınır rengi
+
+    &::after {
+        display: block; // Seçili durumda işareti göster
+    }
+}
