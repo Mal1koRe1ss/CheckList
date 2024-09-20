@@ -1,10 +1,24 @@
 # CheckList
 It's a **CheckList** that i build for improving myself.
 
+<h2 align="center">Releases</h2>
+<div align="center">
+  <table>
+    <tr>
+      <td><p align="center"><a href="#" align="center">v0.3</a></p></td>
+    </tr>
+    <tr>
+      <td><p align="center"><a href="#" align="center">v0.2</a></p></td>
+    </tr>
+    <tr>
+      <td><p align="center"><a href="#" align="center">v0.1</a></p></td>
+    </tr>
+  </table>
+</div>
 
 ## License
 
-- You can edit the source code and use it for anything as long as you give me credit.
+- You can edit the source code and use it for personal or commercial purposes, as long as you give me credit.
 - This project is licensed with, **GNU General Public License 3.0**.
 - If you want to ask me something, you can contact me via Instagram or Discord.
 
