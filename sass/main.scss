@@ -18,6 +18,12 @@
 
 #div {
     display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content:center;
@@ -25,46 +31,75 @@
     border-radius: 10px;
 }
 
-#checkbox {
-    margin: 5px;
-}
 
-.checkbox-container {
-    margin: 5px;
-    
-    input[type="checkbox"] {
-        display: none; // Varsayılan checkbox'ı gizle
-    }
-}
-
-.checkbox {
-    width: 1.5em;
-    height: 1.5em;
-    background-color: $border-color; // Arka plan rengi
-    border-radius: 5px; // Köşeleri yuvarla
-    border: 2px solid $border-color; // Sınır rengi
+.container {
+    display: flex;
+    align-items: center;
     position: relative;
-    transition: background-color 0.3s, border-color 0.3s; // Geçiş efekti
-
-    &::after {
-        content: '';
-        position: absolute;
-        display: none;
-        left: 0.5em;
-        top: 0.2em;
-        width: 0.4em;
-        height: 0.8em;
-        border: solid white; // İşaret rengi
-        border-width: 0 0.2em 0.2em 0; // Çizgiyi sadece sağa ve aşağıya çek
-        transform: rotate(45deg);
-    }
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    color: $font-color;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: .6s;
 }
 
-input[type="checkbox"]:checked + .checkbox {
-    background-color: $border-shadow; // Seçili durumda arka plan rengi
-    border-color: $border-glow; // Seçili durumda sınır rengi
+.container:hover {
+    text-shadow: 0px 0px 20px $font-glow;
+}
 
-    &::after {
-        display: block; // Seçili durumda işareti göster
-    }
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 7px;
+    background-color: $border-color;
+    transition: .6s;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: $border-glow;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: $check-color;
+    box-shadow: 0px 0px 10px 3px $border-glow;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid $border-color;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

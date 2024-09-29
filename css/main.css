@@ -15,6 +15,12 @@
 
 #div {
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-content: center;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -22,45 +28,76 @@
   border-radius: 10px;
 }
 
-#checkbox {
-  margin: 5px;
-}
-
-.checkbox-container {
-  margin: 5px;
-}
-.checkbox-container input[type=checkbox] {
-  display: none;
-}
-
-.checkbox {
-  width: 1.5em;
-  height: 1.5em;
-  background-color: #312b3b;
-  border-radius: 5px;
-  border: 2px solid #312b3b;
+.container {
+  display: flex;
+  align-items: center;
   position: relative;
-  transition: background-color 0.3s, border-color 0.3s;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #837992;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.6s;
 }
-.checkbox::after {
+
+.container:hover {
+  text-shadow: 0px 0px 20px #a08dc2;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 7px;
+  background-color: #312b3b;
+  transition: 0.6s;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #403752;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #74678f;
+  box-shadow: 0px 0px 10px 3px #403752;
+}
+
+.checkmark::after {
   content: "";
   position: absolute;
   display: none;
-  left: 0.5em;
-  top: 0.2em;
-  width: 0.4em;
-  height: 0.8em;
-  border: solid white;
-  border-width: 0 0.2em 0.2em 0;
-  transform: rotate(45deg);
 }
 
-input[type=checkbox]:checked + .checkbox {
-  background-color: #272231;
-  border-color: #403752;
-}
-input[type=checkbox]:checked + .checkbox::after {
+.container input:checked ~ .checkmark:after {
   display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #312b3b;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=main.css.map */
