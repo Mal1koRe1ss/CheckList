@@ -5,7 +5,7 @@ It's a **CheckList** that i build for improving myself.
 <div align="center">
   <table>
     <tr>
-      <td><p align="center"><a href="#" align="center">v0.1</a></p></td>
+      <td><p align="center"><a href="https://github.com/Mal1koRe1ss/CheckList/releases/tag/0.1" align="center">v0.1</a></p></td>
     </tr>
   </table>
 </div>
