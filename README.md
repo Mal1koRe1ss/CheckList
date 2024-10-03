@@ -5,12 +5,6 @@ It's a **CheckList** that i build for improving myself.
 <div align="center">
   <table>
     <tr>
-      <td><p align="center"><a href="#" align="center">v0.3</a></p></td>
-    </tr>
-    <tr>
-      <td><p align="center"><a href="#" align="center">v0.2</a></p></td>
-    </tr>
-    <tr>
       <td><p align="center"><a href="#" align="center">v0.1</a></p></td>
     </tr>
   </table>
