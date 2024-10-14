@@ -1,23 +1,17 @@
 {
+  "dependencies": {
+    "sass": "^1.79.5"
+  },
   "name": "checklist",
-  "version": "0.0.1",
-  "description": "CheckList that is made by Mal1koRe1ss",
+  "version": "1.0.0",
+  "description": "It's a **CheckList** that i build for improving myself.",
   "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "main-sass": "sass --watch sass/:css/"
+    "sass": "sass --watch sass/:wwwroot/css/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mal1koRe1ss/CheckList.git"
-  },
-  "author": "Mal1koRe1ss",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mal1koRe1ss/CheckList/issues"
-  },
-  "homepage": "https://github.com/Mal1koRe1ss/CheckList#readme",
-  "dependencies": {
-    "sass": "^1.79.2"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
